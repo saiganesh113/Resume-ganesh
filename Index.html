@@ -1,191 +1,742 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assests/index.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <title>RESUME</title>
-</head>
-<body>
-    <div class="main">
-        <div class="left">
-            <br>
-            <div class="profile-img"><img src="./assests/imgo.png"></div>
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVS AI Ganesh - Professional Resume</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Lora', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    * { box-sizing: border-box; }
 
-            <div class="box-1">
-                <div class="heading">
-                    <p>CONTACT</p>
-                </div>
-                    <P class="p1"><i class="fa-solid fa-mobile icons1"></i> 
-                        <a href="tel:+917032010849">+91 70320-10849</a>
-                    </P>
-                    <P class="p1"><i class="fa-solid fa-envelope icons1"></i> 
-                        <a href="mailto:iamevsaiganesh@gmail.com">iamevsaiganesh@gmail.com</a>
-                    </P>
-                    <P class="p1"><i class="fa-solid fa-user icons1"></i> 
-                        <a href="https://my-portfolio-iota-mauve-22.vercel.app/" target="_blank">Portfolio</a>
-                    </P>
-                    <P class="p1"><i class="fa-brands fa-github icons1"></i> 
-                        <a href="https://github.com/saiganesh113" target="_blank">GitHub</a>
-                    </P>
-                </div>
-            <div class="box-1">
-                <div class="heading">
-                    <P>SKILLS KNOWN</P>
-                </div><br/>
-                <h4 class="side"><b><u>FRONTEND</u></b></h4>
-                <div class="p1">
-                    <span>HTML</span>
-                    <div class="skill-container">
-                        <div class="skill html"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>JS</span>
-                    <div class="skill-container">
-                        <div class="skill js"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>React.js</span>
-                    <div class="skill-container">
-                        <div class="skill React"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>ReactNative </span>
-                    <div class="skill-container">
-                        <div class="skill Angular"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>Vue.js</span>
-                    <div class="skill-container">
-                        <div class="skill vite"></div>
-                    </div>
-                </div>
-                <br/>
-                <h4 class="side"><b><u>BACKEND</u></b></h4>
-                <div class="p1">
-                    <span>Node.js</span>
-                    <div class="skill-container">
-                        <div class="skill nodejs"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>Express.js</span>
-                    <div class="skill-container">
-                        <div class="skill Express"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>Java</span>
-                    <div class="skill-container">
-                        <div class="skill Java"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>Python</span>
-                    <div class="skill-container">
-                        <div class="skill Python"></div>
-                    </div>
-                </div>
-                <br/>
-                <h4 class="side"><b><u>DATA BASE</u></b></h4>
-                <div class="p1">
-                    <span>MySQL</span>
-                    <div class="skill-container">
-                        <div class="skill mysql"></div>
-                    </div>
-                </div>
-                <div class="p1">
-                    <span>MongoDB</span>
-                    <div class="skill-container">
-                        <div class="skill mongoDB"></div>
-                    </div>
-                </div>
-            </div>
+    body {
+      background: black;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100%;
+      padding: 20px;
+    }
+    
+    a[target="_blank"]::after {
+      content: " ◥";
+      font-size: 10px;
+      color: #60a5fa;
+      margin-left: 4px;
+      vertical-align: super;
+    }
+    
 
-            <div class="box-1">
-                <div class="heading">
-                    <p>HOBBIES</p>
-                </div>
-                <div  class="hob" style="padding-top: 5px;">
-                <i class="fa-solid fa-code icons2"></i>
-                <i class="fa-solid fa-music icons2"></i>
-                <i class="fa-solid fa-camera icons2"></i>
-                <i class="fa-solid fa-book icons2"></i>
-                </div>
-            </div>
+    .resume-container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      overflow: hidden;
+    }
 
-            <div class="box-1">
-                <div class="heading">
-                    <p>OTHER SKILLS</p>
-                </div>
-                <div class="other-skills-container">
-                    <div class="pskils"><img src="./assests/figma-removebg-preview.png" alt="Figma"></div>
-                    <div class="pskils"><img src="./assests/photoshop-removebg-preview.png" alt="Figma"></div>
-                    <div class="pskils"><img src="./assests/premiere-pro-removebg-preview.png" alt="Figma"></div>
-                    <div class="pskils"><img src="./assests/images-removebg-preview.png" alt="Figma"></div>
-                </div>
-            </div>
-            
-        </div>
+    .resume-header {
+      padding: 50px 50px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%);
+      border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
 
-        <div class="right">
-            <div class="name-div">
-                <p class="p5"><b>E V SAI GANESH</b></p>
-                <P class="p1" style="padding-left: 20px;">FULLSTACK DEVELOPER</P>
-            </div>
-        <div class="box-2">
-            <h4>ABOUT ME<i class="fa-solid fa-user c=icons icons2"style="font-size:18px !important"></i></h4>
-            <ul>
-                <p class="p2">Seeking a challenging position in a reputed organization where I can learn new skills, expand my knowledge, and leverage my learnings</p>
-            </ul>
-        </div>
-        <div class="box-2">
-            <h4>EDUCATION<i class="fa-solid fa-graduation-cap icons2" style="font-size:18px !important"></i></h4>
-            <Civil class="p2">NBKRIST, Kota, A.P | Civil Engineering, 2019 – 2023</P>
-            <p class="p2" style="font-size: medium;">CGPA: 7.4</P>
-        </div>
-        <div class="box-2">
-            <h4 style="padding-top: 10px; text-align: justify;">EXPERIENCE  <i class="fa-solid fa-laptop icons2"></i></h4>
-            <P class="p2">I have over <b>a year of experience at NexusIQ Solutions</b>, where I worked on <b>three live projects</b>.My contributions included full-stack development, API integration, and responsive </Br> UI design.</P>
-        </div>
-            <div class="box-2">
-                <h4>PROJECTS <i class="fa-solid fa-folder icons2" style="font-size:18px !important; padding-top: 10px;"></i></h4>
-            
-                <!-- PROJECT 1 -->
-                <h6 class="p2-project-title" style="position: relative; display: inline-block;">
-                    <u><a href="https://sreeteqservices.vercel.app/index" target="_blank" class="p2" style="color: blue;">PROJECT 1 - Sree Teq Service Application</a></u>
-                </h6>
-                <p class="p2"><b style="font-weight: bold;">Tools used :</b> React.js, Express.js & MongoDB</p>
-                <p class="p2">About: Developed a full-stack <b>service booking platform with role-based authentication</b>, enabling <b>users and technicians to manage profiles, book services, and interact</b> in real-time.</p>
-            
-                <!-- PROJECT 2 -->
-                <h6 class="p2-project-title" style="position: relative; display: inline-block;">
-                    <u><a href="https://github.com/saiganesh113/Full_stack_fresher.github.io.git" target="_blank" class="p2" style="color:blue;">PROJECT 2 - Full stack Fresher</a></u>
-                </h6>
-                <p class="p2"><b style="font-weight: bold;">Tools used :</b> Html, Express.js & Python</p>
-                <p class="p2">About: Developed a <b>training and placement web application for a tech institute</b>, aimed at assisting full-stack freshers in India and abroad with <b>skill-building and job placement opportunities</b>.</p>
-            
-                <!-- PROJECT 3 -->
-                <h6 class="p2-project-title" style="position: relative; display: inline-block;">
-                    <u><a href="https://github.com/saiganesh113/To-do-main.git" target="_blank" class="p2" style="color: blue;">PROJECT 3 - To-DO mobile application</a></u>
-                </h6>
-                <p class="p2"><b style="font-weight: bold;">Tools used :</b> React Native, Express.js & MongoDB</p>
-                <p class="p2">About: To-Do, not like you think .<b>It's a smart reminder for stock price updates</b>, market ups and downs.This app features a built-in organiser with <b>stock predictions, news updates, and task management</b>.Users can create, edit, and track tasks.</p>
-            
-                <!-- PROJECT 4 -->
-                <h6 class="p2-project-title" style="position: relative; display: inline-block;">
-                    <u><a target="_blank" class="p2" style="color: blue;">PROJECT 4 - User management system</a></u>
-                </h6>
-                <p class="p2"><b style="font-weight: bold;">Tools used :</b> React.js, Express.js & MongoDB</p>
-                <p class="p2">About: The <b>User Management System (UMS) </b>handles<b> user, role, group, firm, and permission management</b>. It integrates with an <b>Exam Portal and Question Bank Portal</b>, which send <b>token to UMS for authentication</b>. The UMS validates these token to ensure <b>secure data access and role-based control</b></p>
-            </div>
-        </div>
+    .resume-header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .candidate-name {
+      font-family: 'Lora', serif;
+      font-size: 42px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 10px 0;
+      letter-spacing: -1px;
+    }
+
+    .candidate-title {
+      font-size: 15px;
+      color: #93c5fd;
+      font-weight: 600;
+      margin: 0 0 20px 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .candidate-title::before {
+      content: '';
+      width: 24px;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #60a5fa);
+      border-radius: 2px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-item strong {
+      color: #3b82f6;
+      font-weight: 600;
+    }
+
+    .resume-section {
+      padding: 40px 50px;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+    }
+
+    .resume-section:last-child {
+      border-bottom: none;
+      padding-bottom: 50px;
+    }
+
+    .skill-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-logos img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      filter: grayscale(20%);
+      transition: transform 0.2s ease;
+    }
+
+    .skill-logos img:hover {
+      transform: scale(1.15);
+      filter: grayscale(0%);
+    }
+
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #e0e7ff;
+      margin: 0 0 24px 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #6366f1);
+      border-radius: 2px;
+    }
+
+    .summary-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #cbd5e1;
+      margin: 0;
+      background: rgba(59, 130, 246, 0.08);
+      padding: 16px 20px;
+      border-left: 3px solid #3b82f6;
+      border-radius: 4px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 0;
+    }
+
+    .skill-category {
+      margin: 0;
+      background: rgba(59, 130, 246, 0.08);
+      padding: 16px;
+      border-radius: 8px;
+      border-left: 3px solid #3b82f6;
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+      background: rgba(59, 130, 246, 0.12);
+      transform: translateX(4px);
+    }
+
+    .skill-category-title {
+      font-weight: 700;
+      color: #60a5fa;
+      font-size: 12px;
+      margin: 0 0 8px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .skill-items {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .experience-item {
+      margin-bottom: 28px;
+      padding: 20px;
+      background: rgba(59, 130, 246, 0.08);
+      border-radius: 10px;
+      border-left: 4px solid #3b82f6;
+      transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+      background: rgba(59, 130, 246, 0.12);
+      transform: translateX(4px);
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      color: #e0e7ff;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .job-meta {
+      font-size: 13px;
+      color: #93c5fd;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .job-date {
+      font-size: 12px;
+      color: #64748b;
+      text-align: right;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .job-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0 0;
+    }
+
+    .job-bullets li {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .job-bullets li:before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .project-item {
+      margin-bottom: 24px;
+      padding: 18px;
+      background: rgba(99, 102, 241, 0.08);
+      border-radius: 10px;
+      border-left: 4px solid #6366f1;
+      transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+      background: rgba(99, 102, 241, 0.12);
+      transform: translateX(4px);
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-title {
+      font-weight: 700;
+      color: #e0e7ff;
+      font-size: 15px;
+      margin: 0 0 4px 0;
+    }
+
+    .project-meta {
+      font-size: 12px;
+      color: #818cf8;
+      margin: 0 0 10px 0;
+      font-weight: 500;
+    }
+
+    .project-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-bullets li {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .project-bullets li:before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #818cf8;
+      font-weight: 600;
+    }
+
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 16px;
+      background: rgba(99, 102, 241, 0.08);
+      border-radius: 8px;
+      border-left: 3px solid #6366f1;
+    }
+
+    .education-details h4 {
+      font-weight: 700;
+      color: #e0e7ff;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .education-details p {
+      font-size: 13px;
+      color: #93c5fd;
+      margin: 4px 0 0 0;
+      font-weight: 500;
+    }
+
+    .education-date {
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .cgpa-badge {
+      font-size: 12px;
+      color: #60a5fa;
+      margin-top: 8px;
+      font-weight: 600;
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.15);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      .resume-header {
+        padding: 35px 25px;
+      }
+      
+      .resume-section {
+        padding: 30px 25px;
+      }
+
+      .candidate-name {
+        font-size: 28px;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .job-header {
+        flex-direction: column;
+      }
+
+      .job-date {
+        text-align: left;
+        margin-top: 6px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      
+      .resume-container {
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        background: white;
+      }
+
+      .resume-header {
+        background: white;
+        border-bottom: 2px solid #1e3a8a;
+      }
+
+      .resume-header::before {
+        display: none;
+      }
+
+      .candidate-name {
+        background: none;
+        color: #1e3a8a;
+        -webkit-text-fill-color: unset;
+      }
+
+      .candidate-title {
+        color: #64748b;
+      }
+
+      .candidate-title::before {
+        background: #1e3a8a;
+      }
+
+      .resume-section {
+        background: white;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .section-title {
+        color: #1e3a8a;
+      }
+
+      .section-title::after {
+        background: #1e3a8a;
+      }
+
+      .summary-text {
+        background: #f8f9fa;
+        border-left-color: #1e3a8a;
+        color: #475569;
+      }
+
+      .skill-category {
+        background: #f8f9fa;
+        border-left-color: #1e3a8a;
+      }
+
+      .skill-category-title {
+        color: #1e3a8a;
+      }
+
+      .skill-items {
+        color: #475569;
+      }
+
+      .experience-item, .project-item {
+        background: #f8f9fa;
+        border-left-color: #1e3a8a;
+      }
+
+      .job-title, .project-title {
+        color: #1e3a8a;
+      }
+
+      .job-meta, .project-meta {
+        color: #64748b;
+      }
+
+      .job-bullets li, .project-bullets li {
+        color: #475569;
+      }
+
+      .job-bullets li:before {
+        color: #1e3a8a;
+      }
+
+      .contact-info, .contact-item strong {
+        color: #475569;
+      }
+
+      .contact-item strong {
+        color: #1e3a8a;
+      }
+
+        .contact-info {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr; /* 2 columns */
+            gap: 10px 20px;
+        }
+
+        .contact-item {
+            break-inside: avoid;
+        }
+
+      .education-item {
+        background: #f8f9fa;
+        border-left-color: #1e3a8a;
+      }
+
+      .education-details h4 {
+        color: #1e3a8a;
+      }
+
+      .education-details p {
+        color: #64748b;
+      }
+
+      .cgpa-badge {
+        background: #f8f9fa;
+        color: #1e3a8a;
+      }
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="resume-container">
+   <!-- Header -->
+   <div class="resume-header">
+    <div class="header-content">
+     <h1 class="candidate-name" id="fullName">EVS AI GANESH</h1>
+     <p class="candidate-title" id="jobTitle">Jr. Full Stack Developer</p>
+     <div class="contact-info">
+      <div class="contact-item">
+       <strong>Phone:</strong>
+       <span id="phoneNumber">+91 70320-10849</span>
+      </div>
+      <div class="contact-item">
+       <strong>Email:</strong>
+        <a href="mailto:iamevsaiganesh@gmail.com" target="_blank" id="emailAddress">
+          iamevsaiganesh@gmail.com
+       </a>
+      </div>
+      <div class="contact-item">
+       <strong>GitHub:</strong>
+       <a href="https://github.com/iamevsaiganesh" target="_blank">
+        github.com/saiganesh113
+       </a>
+      </div>
+      <div class="contact-item">
+       <strong>Location:</strong>
+       <a href="https://maps.app.goo.gl/Agc4Qzr1Ypkf2EZ16" target="_blank">
+        Hyderabad, India
+       </a>
+      </div>
+     </div>
     </div>
-</body>
+   </div><!-- Professional Summary -->
+   <div class="resume-section">
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="summary-text" id="summaryText">Results-driven Full Stack Developer specializing in scalable and secure web applications, with hands-on experience in building high-performance systems. Demonstrated expertise in designing enterprise-level platforms, RESTful APIs, JWT authentication, RBAC, and multi-module system integration. Proven track record of delivering production-grade solutions with strong emphasis on performance optimization, security, and clean code practices.</p>
+   </div><!-- Skills -->
+   <div class="resume-section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <!-- Frontend -->
+      <div class="skill-category">
+        <div class="skill-category-title">Frontend & Frameworks</div>
+        <div class="skill-logos">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" title="React Native">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        </div>
+      </div>
+      <!-- Backend -->
+      <div class="skill-category">
+        <div class="skill-category-title">Backend & APIs</div>
+        <div class="skill-logos">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" title="Node.js">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" title="Express.js">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" title="REST APIs">
+          <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" title="JWT Authentication">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" title="Redis (Caching)">
+        </div>
+      </div>
+      <!-- DB & Tools -->
+      <div class="skill-category">
+        <div class="skill-category-title">Databases & Tools</div>
+        <div class="skill-logos">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+        </div>
+      </div>
+      <!-- Core -->
+      <div class="skill-category">
+        <div class="skill-category-title">Core Competencies</div>
+        <div class="skill-logos">
+          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" title="System Design">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" title="Performance">
+          <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" title="Agile">
+          <img src="https://cdn-icons-png.flaticon.com/512/2721/2721297.png" title="Clean Code">
+        </div>
+      </div>
+    </div>
+   </div><!-- Education -->
+   <div class="resume-section">
+    <h2 class="section-title">Education</h2>
+    <div class="education-item">
+     <div class="education-details">
+      <h4>Bachelor of Technology (Civil Engineering)</h4>
+      <p>NBKR Institute of Science &amp; Technology (NBKRIST), Kota, Andhra Pradesh</p>
+      <p style="font-size: 12px; color: #ffffff; margin: 8px 0 0 0;">CGPA: 7.4 / 10</p>
+     </div>
+     <div class="education-date">
+      2019 – 2023
+     </div>
+    </div>
+   </div><!-- Experience -->
+   <div class="resume-section">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="project-item">
+     <div class="job-header">
+      <div>
+       <p class="job-title">Junior Full Stack Developer</p>
+       <p class="job-meta">NexusIQ Solutions, Hyderabad, India</p>
+      </div>
+      <div class="job-date">
+       SEP 2023 – Present
+      </div>
+     </div>
+     <br/>
+     <!-- <br/> -->
+     <p class="project-title">
+      <a href="https://app.nexsaa.com/" target="_blank">NexSAA – Smart Assessment & Analytics Platform</a>
+     </p>
+     <p class="project-meta">
+      <!-- <a href="https://app.nexsaa.com/" target="_blank"> -->
+        Next.js, Node.js, MongoDB, JWT, RBAC, AWS, redis
+      <!-- </a> -->
+     </p>
+     <ul class="project-bullets">
+      <li>Architected and developed a full-stack assessment platform integrating User Management System (UMS) , Exams, and Question Bank three servers with serving 1000+ concurrent users</li>
+      <li>Designed hierarchical question architecture (Courses → Subjects → Topics → Questions)</li>
+      <li>Engineered scalable backend services using Node.js/Express and optimized RESTful APIs, reducing response time by 40%</li>
+      <li>Built a secure exam engine with full-screen enforcement, timer-based auto-submission, browser detection, and video proctoring with violation tracking</li>
+      <li>Developed AI-based question generation system with review workflows and bulk import, improving content creation efficiency by 60%</li>
+      <li>Enabled public and private exam control using batch restrictions and email-based permission systems</li>
+      <li>Designed advanced analytics dashboards with real-time performance metrics, toppers ranking, section-wise analysis, and predictive insights & student performance reports with question-level analytics, time analysis, and benchmarking against class averages</li>
+      <li>Developed bulk user onboarding system with CSV validation, automated email workflows, and dynamic template-based customization</li>
+      <li>Implemented configurable platform settings (SMTP, labels, branding) enabling white-label deployment for multiple clients</li>
+     </ul>
+    </div>
+
+   </div><!-- Key Projects -->
+   <div class="resume-section">
+    <h2 class="section-title">Freelancing Projects</h2>
+    <div class="project-item">
+     <p class="project-title">
+      <a href="https://sree-teq-services.vercel.app/index" target="_blank">
+        Sree Teq – Home Appliance Service Platform
+      </a>
+    </p>
+     <p class="project-meta">
+      <!-- <a href="https://sree-teq-services.vercel.app/index" target="_blank"> -->
+        React.js, Node.js, Express.js, MongoDB
+      <!-- </a> -->
+     </p>
+     <ul class="project-bullets">
+      <li>On-demand home appliance service marketplace for AC, refrigerator, and washing machine repairs</li>
+      <li>Dual-role platform architecture for customers and technicians with separate workflows, profiles, and job management systems</li>
+      <li>Slot-based booking system with real-time availability, scheduling optimization, and automated technician assignment algorithm</li>
+      <li>End-to-end service : request creation → technician assigned → job tracking → completion → payment processing</li>
+      <li>Technician dashboard with assigned tasks visibility, status updates, schedule management, and performance metrics</li>
+     </ul>
+    </div>
+    <div class="project-item">
+     <p class="project-title">
+      <a href="https://simstech.in/" target="_blank">
+        SIMS – Smart Institute Management System
+      </a>
+     </p>
+     <p class="project-meta">
+      <!-- <a href="https://simstech.in/" target="_blank"> -->
+        React.js, React Native, Node.js, MongoDB, Tailwind CSS, AWS
+      <!-- </a> -->
+     </p>
+     <ul class="project-bullets">
+      <li>Comprehensive institute management platform automating academic, administrative, and HR workflows for 5000+ users</li>
+      <li>Multi-user system with role-based access for administrators, staff, and students enabling seamless institutional collaboration</li>
+      <li>Scalable RESTful API architecture and optimized MongoDB queries handling complex institutional data with sub-100ms response times</li>
+      <li>Real-time email notification system for alerts, schedule updates, announcements, and communication workflows</li>
+      <li>Responsive UI using Tailwind CSS ensuring consistent experience across web and mobile applications</li>
+      <li>AWS deployment with optimized infrastructure for performance, scalability, and high availability</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </body>
 </html>
